@@ -1,0 +1,35 @@
+name: GorsokSpawn
+version: '${version}'
+main: dev.gorsok.spawn.SpawnPlugin
+api-version: '1.21'
+author: Gorsok
+description: Teleport to spawn with a warmup, a cooldown and fully editable messages.
+commands:
+  spawn:
+    description: Teleport to the server spawn.
+    usage: /spawn
+    permission: gspawn.use
+  setspawn:
+    description: Set the server spawn to your position.
+    usage: /setspawn
+    permission: gspawn.set
+  gspawn:
+    description: Admin command for GorsokSpawn.
+    usage: /gspawn reload
+    permission: gspawn.admin
+permissions:
+  gspawn.use:
+    description: Use /spawn.
+    default: true
+  gspawn.set:
+    description: Use /setspawn.
+    default: op
+  gspawn.admin:
+    description: Reload the configuration.
+    default: op
+  gspawn.bypass.warmup:
+    description: Teleport instantly, without the warmup.
+    default: op
+  gspawn.bypass.cooldown:
+    description: Ignore the cooldown.
+    default: op

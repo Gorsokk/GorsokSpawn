@@ -1,0 +1,33 @@
+# GorsokSpawn configuration
+# Messages use MiniMessage format: https://docs.advntr.dev/minimessage/format.html
+
+# Seconds the player must wait (without moving) before teleporting. 0 = instant.
+warmup-seconds: 3
+# Seconds before the player can use /spawn again. 0 = no cooldown.
+cooldown-seconds: 30
+# Cancel the teleport if the player moves to another block during the warmup.
+cancel-on-move: true
+# Cancel the teleport if the player takes damage during the warmup.
+cancel-on-damage: true
+
+effects:
+  sound: true
+  particles: true
+
+messages:
+  prefix: "<gradient:#F3C969:#C98A2B><bold>Spawn</bold></gradient> <dark_gray>»</dark_gray> "
+  no-spawn: "<red>No spawn is set yet. An admin can set it with <white>/setspawn</white>.</red>"
+  spawn-set: "<green>Spawn set to your position.</green>"
+  warmup-start: "<gray>Teleporting in <yellow><seconds>s</yellow>. Don't move!</gray>"
+  warmup-actionbar: "<yellow>Teleporting in <seconds>s...</yellow>"
+  cancelled-move: "<red>Teleport cancelled: you moved.</red>"
+  cancelled-damage: "<red>Teleport cancelled: you took damage.</red>"
+  already-waiting: "<red>You are already teleporting.</red>"
+  cooldown: "<red>Please wait <yellow><seconds>s</yellow> before using /spawn again.</red>"
+  teleported: "<green>Welcome to spawn!</green>"
+  players-only: "<red>Only players can use this command.</red>"
+  reloaded: "<green>Configuration reloaded.</green>"
+  usage-admin: "<gray>Usage: <white>/gspawn reload</white></gray>"
+
+# Saved by /setspawn. Do not edit by hand unless you know what you are doing.
+spawn: null
